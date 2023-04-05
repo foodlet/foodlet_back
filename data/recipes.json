@@ -1,0 +1,166 @@
+{
+  "recipes": [
+    {
+      "title": "Vegan Lentil Soup",
+      "ingredients": [
+        {
+          "name": "brown lentils",
+          "quantity": "1 cup"
+        },
+        {
+          "name": "carrots, chopped",
+          "quantity": "2"
+        },
+        {
+          "name": "celery, chopped",
+          "quantity": "2 stalks"
+        },
+        {
+          "name": "onion, chopped",
+          "quantity": "1"
+        },
+        {
+          "name": "garlic, minced",
+          "quantity": "3 cloves"
+        },
+        {
+          "name": "vegetable broth",
+          "quantity": "4 cups"
+        },
+        {
+          "name": "cumin",
+          "quantity": "1 teaspoon"
+        },
+        {
+          "name": "coriander",
+          "quantity": "1 teaspoon"
+        },
+        {
+          "name": "salt",
+          "quantity": "1/2 teaspoon"
+        },
+        {
+          "name": "pepper",
+          "quantity": "1/4 teaspoon"
+        }
+      ],
+      "steps": [
+        "Rinse the lentils and place them in a large pot with the chopped carrots, celery, onion, garlic, vegetable broth, cumin, coriander, salt, and pepper.",
+        "Bring to a boil, then reduce the heat and let simmer for 30-40 minutes, until the lentils are tender.",
+        "Remove from heat and let cool for a few minutes.",
+        "Use an immersion blender to blend the soup until it is smooth and creamy.",
+        "If the soup is too thick, add more vegetable broth or water to thin it out.",
+        "Serve hot, garnished with fresh herbs if desired."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "oven": false,
+      "fridge": true
+    },
+    {
+      "title": "Vegetarian Lasagna",
+      "ingredients": [
+        {
+          "name": "lasagna noodles",
+          "quantity": "1 package"
+        },
+        {
+          "name": "ricotta cheese",
+          "quantity": "2 cups"
+        },
+        {
+          "name": "spinach, chopped",
+          "quantity": "2 cups"
+        },
+        {
+          "name": "mozzarella cheese, shredded",
+          "quantity": "2 cups"
+        },
+        {
+          "name": "marinara sauce",
+          "quantity": "2 cups"
+        },
+        {
+          "name": "garlic, minced",
+          "quantity": "3 cloves"
+        },
+        {
+          "name": "olive oil",
+          "quantity": "2 tablespoons"
+        },
+        {
+          "name": "salt",
+          "quantity": "1/2 teaspoon"
+        },
+        {
+          "name": "pepper",
+          "quantity": "1/4 teaspoon"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 375°F.",
+        "Cook lasagna noodles according to package instructions.",
+        "In a large bowl, combine ricotta cheese, chopped spinach, minced garlic, salt, and pepper.",
+        "Spread a thin layer of marinara sauce in the bottom of a baking dish.",
+        "Add a layer of cooked lasagna noodles on top of the sauce.",
+        "Spread a layer of the ricotta-spinach mixture on top of the lasagna noodles, followed by a layer of shredded mozzarella cheese.",
+        "Repeat layers until all ingredients are used up, ending with a layer of mozzarella cheese on top.",
+        "Cover the baking dish with aluminum foil and bake in the preheated oven for 30 minutes.",
+        "Remove the foil and continue baking for an additional 10-15 minutes, until the cheese is melted and bubbly.",
+        "Remove from oven and let cool for a few minutes before serving."
+      ],
+      "vegan": false,
+      "vegetarian": true,
+      "oven": true,
+      "fridge": true
+    },
+    {
+      "title": "Oven-Roasted Vegetables",
+      "ingredients": [
+        {
+          "name": "carrots, sliced",
+          "quantity": "4"
+        },
+        {
+          "name": "potatoes, diced",
+          "quantity": "4"
+        },
+        {
+          "name": "sweet potatoes, diced",
+          "quantity": "2"
+        },
+        {
+          "name": "red onion, sliced",
+          "quantity": "1"
+        },
+        {
+          "name": "garlic, minced",
+          "quantity": "3 cloves"
+        },
+        {
+          "name": "olive oil",
+          "quantity": "2 tablespoons"
+        },
+        {
+          "name": "salt",
+          "quantity": "1/2 teaspoon"
+        },
+        {
+          "name": "pepper",
+          "quantity": "1/4 teaspoon"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 400°F.",
+        "In a large bowl, toss the sliced carrots, diced potatoes, diced sweet potatoes, sliced red onion, minced garlic, olive oil, salt, and pepper until well coated.",
+        "Spread the vegetables out in a single layer on a baking sheet.",
+        "Roast in the preheated oven for 30-40 minutes, stirring occasionally, until the vegetables are tender and golden brown.",
+        "Remove from oven and serve immediately."
+      ],
+      "vegan": true,
+      "vegetarian": true,
+      "oven": true,
+      "fridge": false
+    }
+  ]
+}

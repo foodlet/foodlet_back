@@ -27,6 +27,12 @@ app.use('/auth', authRouter)
 const recipeRouter = require('./routers/recipe.router')
 app.use('/recipes', recipeRouter)
 
+const apiRouter = require('./routers/api.router')
+app.use('/api', apiRouter)
+
+const reviewRouter = require('./routers/review.router')
+app.use('/review', reviewRouter)
+
 app.use((req, res, next) => {
   next(createError(StatusCodes.NOT_FOUND, 'Route not found'))
 })
