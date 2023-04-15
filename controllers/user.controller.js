@@ -3,7 +3,17 @@ const User = require('../models/User.model')
 const {StatusCodes} = require('http-status-codes')
 
 module.exports.create = (req, res, next) => {
-  User.create(req.body)
+  if(req.file) {
+    req.body.profilePic = req.file.path
+  }
+
+  const {
+    firstName, lastName, username, email, password, profilePic, foodAlergies, vegan, vegetarian
+  } = req.body
+
+  User.create({
+    firstName, lastName, username, email, password, profilePic, foodAlergies, vegan, vegetarian
+  })
     .then(createdUser => {
       res.status(StatusCodes.CREATED).json(createdUser)
     })

@@ -33,6 +33,9 @@ app.use('/api', apiRouter)
 const reviewRouter = require('./routers/review.router')
 app.use('/review', reviewRouter)
 
+const saveRouter = require('./routers/save.router')
+app.use('/save', saveRouter)
+
 app.use((req, res, next) => {
   next(createError(StatusCodes.NOT_FOUND, 'Route not found'))
 })

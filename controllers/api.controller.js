@@ -51,3 +51,15 @@ module.exports.getRecipes = (req, res, next) => {
   //     console.error(error);
   //   });
 }
+
+module.exports.getRecipeDetail = (req, res, next) => {
+  axios.get('https://tasty.p.rapidapi.com/recipes/get-more-info', {
+    headers: {
+      'X-RapidAPI-Key': '37c1bc8015mshadb2731ba644b10p180078jsn4abbfafbbee5',
+      'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+    },
+    params: {id: req.params.id}
+  })
+    .then(response => res.json(response.data.results))
+    .catch(next)
+}

@@ -82,6 +82,13 @@ UserSchema.pre('save', function(next) {
   }
 })
 
+UserSchema.virtual('saves', {
+  ref: 'Save',
+  foreignField: 'user',
+  localField: '_id',
+  justOne: false
+})
+
 UserSchema.methods.checkPassword = function(passwordToCompare) {
   console.log(this)
   console.log(passwordToCompare, this.password)

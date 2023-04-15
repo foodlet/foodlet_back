@@ -54,13 +54,13 @@ const recipeSchema = new mongoose.Schema(
       required: [true, REQUIRED_FIELD]
     },
     steps: [{
-      image: {
-        type: String
-      },
-      stepNumber: {
-        type: Number,
-        required: [true, REQUIRED_FIELD]
-      },
+      // image: {
+      //   type: String
+      // },
+      // stepNumber: {
+      //   type: Number,
+      //   required: [true, REQUIRED_FIELD]
+      // },
       heading: {
         type: String,
         required: [true, REQUIRED_FIELD]
@@ -72,6 +72,13 @@ const recipeSchema = new mongoose.Schema(
     }]
   }
 )
+
+recipeSchema.virtual('saves', {
+  ref: 'Save',
+  foreignField: 'recipe',
+  localField: '_id',
+  justOne: false
+})
 
 const Recipe = mongoose.model('Recipe', recipeSchema)
 
