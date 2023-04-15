@@ -8,10 +8,12 @@ const reviewSchema = new mongoose.Schema(
       ref: 'User',
       required: [true, REQUIRED_FIELD]
     },
-    recipe: {
+    dbRecipe: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Recipe',
-      required: [true, REQUIRED_FIELD]
+      ref: 'Recipe'
+    },
+    externalRecipe: {
+      type: String
     },
     score: {
       type: Number,

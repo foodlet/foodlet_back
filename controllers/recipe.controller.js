@@ -41,9 +41,12 @@ module.exports.deleteRecipe = (req, res, next) => {
 }
 
 module.exports.editRecipe = (req, res, next) => {
-  Recipe.findByIdAndUpdate(req.params.id, req.body, {new: true})
-    .then(recipe => res.json(recipe))
-    .catch(next)
+  Recipe.findByIdAndUpdate(
+    req.params.id,
+    req.body, 
+    {new: true})
+      .then(recipe => res.json(recipe))
+      .catch(next)
 }
 
 // navigate('/list', { state: { products: 'cosas '}})

@@ -3,6 +3,7 @@ const {StatusCodes} = require('http-status-codes')
 
 module.exports.getMySaves = (req, res, next) => {
   Save.find({user: req.currentUser})
+    .populate('externalRecipe')
     .then(saves => res.json(saves))
     .catch(next)
 }
