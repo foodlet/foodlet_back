@@ -41,16 +41,29 @@ module.exports.getReview = (req, res, next) => {
     .catch(next)
 }
 
-module.exports.getReviewByRecipe = (req, res, next) => {
-  Review.find({dbRecipe: req.params.id})
-    .then(review => {
-      if(!review) {
-        Review.find({externalRecipe: req.params.id})
-          .then(externalReview => res.json(externalReview))
-          .catch(next)
-      } else {
-        res.json(review)
-      }
-    })
-    .catch(next)
+module.exports.getReviewsByRecipe = (req, res, next) => {
+  // Review.find({dbRecipe: req.params.id})
+  //   .populate('user')
+  //   .then(review => {
+  //     if(!review) {
+  //       Review.find({externalRecipe: req.params.id})
+  //         .populate('user')
+  //         .then(externalReview => res.json(externalReview))
+  //         .catch(next)
+  //     } else {
+  //       res.json(review)
+  //     }
+  //   })
+  //   .catch(next)
+  if(req.params.id.length < 5) {
+    Review.find({externalRecipe: req.params.id})
+      .populate('user')
+      .then(externalReview => res.json(externalReview))
+      .catch(next)
+  } else {
+    Review.find({dbRecipe: req.params.id})
+      .populate('user')
+      .then(dbReview => res.json(dbReview))
+      .catch(next)
+  }
 }
