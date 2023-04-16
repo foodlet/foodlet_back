@@ -9,7 +9,8 @@ const saveSchema = new mongoose.Schema(
       required: [true, REQUIRED_FIELD]
     },
     recipe: {
-      type: mongoose.Schema.Types.ObjectId
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Recipe'
     },
     externalRecipe: {
       type: String
