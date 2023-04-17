@@ -7,6 +7,8 @@ router.post('/', isAuthenticated, upload.single('image'), recipeController.creat
 router.get('/me', isAuthenticated, recipeController.getMyRecipes)
 router.get('/me/:id', isAuthenticated, recipeController.getMyRecipesDetail)
 router.delete('/:id', isAuthenticated, recipeController.deleteRecipe)
-router.patch('/:id', isAuthenticated, recipeController.editRecipe)
+router.patch('/:id', isAuthenticated, upload.single('image'), recipeController.editRecipe)
+router.get('/not-me', isAuthenticated, recipeController.getFeedRecipes)
+router.get('/', recipeController.getRecipes)
 
 module.exports = router

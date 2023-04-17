@@ -6,5 +6,6 @@ const upload = require('../config/storage.config');
 router.post('/:id', isAuthenticated, upload.single('image'), reviewController.create)
 // router.get('/:id', reviewController.getReview)
 router.get('/:id', reviewController.getReviewsByRecipe)
+router.get('/me', isAuthenticated, reviewController.getMyReviews)
 
 module.exports = router

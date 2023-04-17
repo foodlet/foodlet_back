@@ -67,3 +67,9 @@ module.exports.getReviewsByRecipe = (req, res, next) => {
       .catch(next)
   }
 }
+
+module.exports.getMyReviews = (req, res, next) => {
+  Review.find({user: req.currentUser})
+    .then(reviews => res.json(reviews))
+    .catch(next)
+}

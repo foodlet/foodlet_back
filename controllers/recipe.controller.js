@@ -41,12 +41,38 @@ module.exports.deleteRecipe = (req, res, next) => {
 }
 
 module.exports.editRecipe = (req, res, next) => {
+  if(req.file) {
+    req.body.image = req.file.path
+  }
+
+  const ingredients = JSON.parse(req.body.ingredients)
+  const steps = JSON.parse(req.body.steps)
+
+  const { name, description, time, skillLevel, oven, fridge, image } = req.body
+
   Recipe.findByIdAndUpdate(
     req.params.id,
-    req.body, 
+    {
+      name, description, ingredients, time, skillLevel, oven, fridge, steps, image
+    }, 
     {new: true})
       .then(recipe => res.json(recipe))
       .catch(next)
+}
+
+module.exports.getFeedRecipes = (req, res, next) => {
+  Recipe.find({createdBy: {$ne: req.currentUser}})
+    .then(recipes => {
+      console.log(recipes)
+      res.json(recipes)
+    })
+    .catch(next)
+}
+
+module.exports.getRecipes = (req, res, next) => {
+  Recipe.find()
+    .then(recipes => res.json(recipes))
+    .catch(next)
 }
 
 // navigate('/list', { state: { products: 'cosas '}})
