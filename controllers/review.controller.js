@@ -69,7 +69,9 @@ module.exports.getReviewsByRecipe = (req, res, next) => {
 }
 
 module.exports.getMyReviews = (req, res, next) => {
+  console.log('HOLAAAAA')
   Review.find({user: req.currentUser})
+    .populate('dbRecipe')
     .then(reviews => res.json(reviews))
     .catch(next)
 }
