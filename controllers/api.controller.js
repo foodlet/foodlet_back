@@ -3,7 +3,7 @@ const axios = require('axios')
 module.exports.getRecipes = (req, res, next) => {
   axios.get('https://tasty.p.rapidapi.com/recipes/list', {
     headers: {
-      'X-RapidAPI-Key': '37c1bc8015mshadb2731ba644b10p180078jsn4abbfafbbee5',
+      'X-RapidAPI-Key': 'e9c05414a1msha9cfab00c16569dp1b9d5djsnd33f9aca9679',
       'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
     },
     params: {
