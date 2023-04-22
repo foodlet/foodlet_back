@@ -62,7 +62,6 @@ module.exports.editRecipe = (req, res, next) => {
 
 module.exports.getFeedRecipes = (req, res, next) => {
   Recipe.find({createdBy: {$ne: req.currentUser}})
-    .populate('user')
     .then(recipes => {
       console.log(recipes)
       res.json(recipes)
